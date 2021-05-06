@@ -1,0 +1,39 @@
+<div class="container">
+<div class="home-container">
+
+    <% @trips.each do |trip| %>
+    <a href="/trips/<% trip.id %>" class="card">
+        <div class="card-map-container">
+            <div id="map" data-path="<%= trip.path %>" data-id="<%= trip.id %>">
+            </div>
+        </div>
+        <div class="card-title"><%= trip.name %></div>
+
+        <span class="card-distance"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1.17em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 440">
+                <path d="M330.5 85q-17.5 0-30-12.5t-12.5-30t12.5-30t30-12.5t30 12.5t12.5 30t-12.5 30t-30 12.5zm-224 139q44.5 0 75.5 31t31 75.5t-31 75.5t-75.5 31T31 406T0 330.5T31 255t75.5-31zm0 181q30.5 0 52.5-22t22-52.5t-22-52.5t-52.5-22T54 278t-22 52.5T54 383t52.5 22zM230 192l47 49v132h-42V267l-69-60q-12-10-12-30q0-17 12-30l60-60q10-12 30-12q18 0 34 12l41 41q32 32 76 32v43q-64 0-108-45l-17-17zm175.5 32q44.5 0 75.5 31t31 75.5t-31 75.5t-75.5 31t-75.5-31t-31-75.5t31-75.5t75.5-31zm0 181q30.5 0 52.5-22t22-52.5t-22-52.5t-52.5-22t-52.5 22t-22 52.5t22 52.5t52.5 22z" fill="#626262" /></svg><%= trip.distance %>m</span>
+
+        <%
+=begin%>
+        <div><%= trip.likes %></div>
+        <div><%= trip.author_id %></div>
+        <%
+=end%>
+    </a>
+    <%
+=begin%>
+
+    <div><%= link_to 'Show', trip %></div>
+    <div><%= link_to 'Edit', edit_trip_path(trip) %></div>
+    <div><%= link_to 'Destroy', trip, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+    <%
+=end%>
+    <% end %>
+
+</div>
+
+<div class="button-cta-container">
+    <a href="/trips/new" class="bn9"><button class="bn9"><span>Ajouter un parcours</span></button></a>
+   
+</div>
+
+</div>
