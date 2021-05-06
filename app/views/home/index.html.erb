@@ -2,9 +2,9 @@
 <div class="home-container">
 
     <% @trips.each do |trip| %>
-    <a href="/trips/<% trip.id %>" class="card">
+    <a href="/trips/<%= trip.id %>" class="card">
         <div class="card-map-container">
-            <div id="map" data-path="<%= trip.path %>" data-id="<%= trip.id %>">
+            <div id="map" class="map_card" data-path="<%= trip.path %>" data-id="<%= trip.id %>">
             </div>
         </div>
         <div class="card-title"><%= trip.name %></div>

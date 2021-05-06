@@ -33,21 +33,103 @@ a {
 }
 
 header {
-    display: flex;
-    overflow: hidden;
-    margin-left: -20px;
-    background-color: black;
-    font-weight: 800;
-    color: rgb(255, 255, 255);
-    font-style: italic;
-    padding: 10px 0px;
+  z-index: 10;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  margin-left: -20px;
+  background-color: black;
+  font-weight: 800;
+  color: rgb(255, 255, 255);
+  font-style: italic;
+  padding: 10px 0px;
+  margin-bottom: 1rem;
+  gap: 10px;
+  span {
+    width: 100px;
+  }
+}
+.map_full {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.button_edit,
+.button_back {
+    padding:1rem .5rem;
+    background-color: rgba(0, 0, 0, 0.774);
+    border: white solid;
+    color: white;
+}
+input, textarea {
+    width: 300px;
+    border: solid black 1px;
+    color: inherit;
+    appearance: none;
+    background-color: #fff;
+    border-color: #6b7280;
+    border-width: 1px;
+    border-radius: 0;
+    padding-top: .5rem;
+    padding-right: .75rem;
+    padding-bottom: .5rem;
+    padding-left: .75rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    display: block;
+    margin-top: .25rem;
+    //idth: 100%;
     margin-bottom: 1rem;
-gap: 10px;
-    span {
-        width: 100px;
-    }
+}
+select {
+   
+    font-family: inherit;
+    margin: 0;
+    text-transform: none;
+    color: inherit;
+    appearance: none;
+    background-color: #fff;
+  
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    padding-left: .75rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right .5rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    padding-right: 2.5rem;
+    -webkit-print-color-adjust: exact;
+    display: block;
+    margin-top: .25rem;
+    width: 300px;
+    border: solid #6b7280 1px;
 }
 
+form {
+
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+.map_full_container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+.controls_container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -63,17 +145,17 @@ gap: 10px;
   margin-right: auto;
 }
 @media (min-width: 1024px) {
-    .container {
-      padding-left: 2rem;
-      padding-right: 2rem;
-    }
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
-  @media (min-width: 640px) {
-    .container {
-      padding-left: 1.5rem;
-      padding-right: 1.5rem;
-    }
+}
+@media (min-width: 640px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
+}
 .card {
   box-shadow: 0 3.4px 2.7px rgba(0, 0, 0, 0.019),
     0 8.7px 6.9px rgba(0, 0, 0, 0.027), 0 17.7px 14.2px rgba(0, 0, 0, 0.033),

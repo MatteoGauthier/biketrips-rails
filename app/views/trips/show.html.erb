@@ -1,3 +1,4 @@
+<div class="controls_container">
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -9,22 +10,14 @@
   <strong>Distance:</strong>
   <%= @trip.distance %>
 </p>
-
-<p>
-  <strong>Likes:</strong>
-  <%= @trip.likes %>
-</p>
-
-<p>
-  <strong>Author:</strong>
-  <%= @trip.author_id %>
-</p>
-
-<p>
-  <strong>Path:</strong>
-  <%= @trip.path %>
-</p>
+<%= link_to 'Edit', edit_trip_path(@trip), class:"button_edit" %>
+<%= link_to 'Back', trips_path, class:"button_back" %>
+</div>
 
 
-<%= link_to 'Edit', edit_trip_path(@trip) %> |
-<%= link_to 'Back', trips_path %>
+<div class="map_full_container">
+<div id="map" class="map_full" data-path="<%= @trip.path %>" data-id="<%= @trip.id %>">
+            </div>
+
+</div>
+
