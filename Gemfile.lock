@@ -203,6 +203,10 @@ GEM
     xpath (3.2.0)
       nokogiri (~> 1.8)
     zeitwerk (2.4.2)
+    zepto-for-rails (0.3.11)
+      rails (> 4)
+    zepto_rails (1.0)
+      rails (>= 3.1.0)
 
 PLATFORMS
   ruby
@@ -227,6 +231,8 @@ DEPENDENCIES
   web-console (>= 4.1.0)
   webdrivers
   webpacker (~> 5.0)
+  zepto-for-rails
+  zepto_rails
 
 RUBY VERSION
    ruby 2.7.3p183

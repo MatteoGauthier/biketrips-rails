@@ -28,8 +28,11 @@
 
 <div class="field">
     <%= form.label :author_id %>
+    <div class="select-flex">
+    
     <%= form.collection_select(:author_id, Author.all, :id, :username, {:prompt => 'Select the author'}, :selected => @trip.author_id ) %>
-    <%= link_to 'New author', new_author_path, class: "has-text-danger has-text-weight-semibold"%>
+    <%= link_to '+', new_author_path, class: "has-text-danger has-text-weight-semibold"%>
+    </div>
 </div>
 
 <div class="field">
@@ -38,6 +41,6 @@
 </div>
 
 <div class="actions">
-    <%= form.submit %>
+    <%= form.submit%>
 </div>
 <% end %>

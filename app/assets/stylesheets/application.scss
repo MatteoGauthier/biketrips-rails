@@ -15,7 +15,7 @@
  */
 
 html {
-  font-family: "Inter var", ui-sans-serif, system-ui, -apple-system,
+  font-family: "Inter", ui-sans-serif, system-ui, -apple-system,
     BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,
     sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,
     Noto Color Emoji;
@@ -60,62 +60,86 @@ header {
 }
 .button_edit,
 .button_back {
-    padding:1rem .5rem;
-    background-color: rgba(0, 0, 0, 0.774);
-    border: white solid;
-    color: white;
+  padding: 1rem 0.5rem;
+  background-color: rgba(0, 0, 0, 0.774);
+  border: white solid;
+  color: white;
 }
-input, textarea {
-    width: 300px;
-    border: solid black 1px;
-    color: inherit;
-    appearance: none;
-    background-color: #fff;
-    border-color: #6b7280;
-    border-width: 1px;
-    border-radius: 0;
-    padding-top: .5rem;
-    padding-right: .75rem;
-    padding-bottom: .5rem;
-    padding-left: .75rem;
-    font-size: 1rem;
-    line-height: 1.5rem;
-    display: block;
-    margin-top: .25rem;
-    //idth: 100%;
-    margin-bottom: 1rem;
+input,
+textarea {
+  width: 300px;
+  border: solid black 1px;
+  color: inherit;
+  appearance: none;
+  background-color: #fff;
+  border-color: #6b7280;
+  border-width: 1px;
+  border-radius: 0;
+  padding-top: 0.5rem;
+  padding-right: 0.75rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  display: block;
+  margin-top: 0.25rem;
+  //idth: 100%;
+  margin-bottom: 1rem;
 }
 select {
-   
-    font-family: inherit;
-    margin: 0;
-    text-transform: none;
-    color: inherit;
-    appearance: none;
-    background-color: #fff;
-  
-    padding-top: .5rem;
-    padding-bottom: .5rem;
-    padding-left: .75rem;
-    font-size: 1rem;
-    line-height: 1.5rem;
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
-    background-position: right .5rem center;
-    background-repeat: no-repeat;
-    background-size: 1.5em 1.5em;
-    padding-right: 2.5rem;
-    -webkit-print-color-adjust: exact;
-    display: block;
-    margin-top: .25rem;
-    width: 300px;
-    border: solid #6b7280 1px;
+  font-family: inherit;
+  margin: 0;
+  text-transform: none;
+  color: inherit;
+  appearance: none;
+  background-color: #fff;
+
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 0.5rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em;
+  padding-right: 2.5rem;
+  -webkit-print-color-adjust: exact;
+  display: block;
+  width: 300px;
+  border: solid #6b7280 1px;
+}
+.form-container {
+  max-width: 300px;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
+.back_button {
+  color: #1f1f1f8f;
+}
 form {
 
-    margin-left: 2rem;
-    margin-right: 2rem;
+  .field {
+    margin-top: 18px;
+  }
+  label {
+    //  margin-bottom: .5rem;
+  }
+  .select-flex {
+    display: flex;
+    margin-top: 7px;
+    a {
+      margin-left: 0.5rem;
+      font-weight: bold;
+      font-size: 2rem;
+      width: 2rem;
+      text-align: center;
+      border: solid #6b7280 1px;
+    }
+  }
 }
+
 .map_full_container {
   position: relative;
   width: 100vw;
