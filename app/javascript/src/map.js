@@ -40,7 +40,7 @@ function setUpMap() {
   mapdivs.forEach((element) => {
     let currentMap = L.map(element,{ zoomControl: false });
     L.tileLayer(
-        "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}.png"
+        "https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png"
       ).addTo(currentMap);
 
     const { path, id } = element.dataset;
