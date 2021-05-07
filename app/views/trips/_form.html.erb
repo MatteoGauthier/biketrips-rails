@@ -16,12 +16,12 @@
     <%= form.text_field :name %>
 </div>
 
-<div class="field">
+<div class="field hidden">
     <%= form.label :distance %>
     <%= form.text_field :distance %>
 </div>
 
-<div class="field">
+<div class="field hidden">
     <%= form.label :likes %>
     <%= form.number_field :likes %>
 </div>
@@ -29,14 +29,14 @@
 <div class="field">
     <%= form.label :author_id %>
     <div class="select-flex">
-    
-    <%= form.collection_select(:author_id, Author.all, :id, :username, {:prompt => 'Select the author'}, :selected => @trip.author_id ) %>
-    <%= link_to '+', new_author_path, class: "has-text-danger has-text-weight-semibold"%>
+
+        <%= form.collection_select(:author_id, Author.all, :id, :username, {:prompt => 'Select the author'}, :selected => @trip.author_id ) %>
+        <%= link_to '+', new_author_path, class: "has-text-danger has-text-weight-semibold"%>
     </div>
 </div>
 
-<div class="field">
-    <%= form.label :path %>
+<div class="field path-field">
+    <%= form.label :path,  "Path (geojson)" %>
     <%= form.text_area :path %>
 </div>
 
